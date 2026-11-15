@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <defs>
+    <radialGradient id="lunarGlow" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="35%" stop-color="#cbd5e1" />
+      <stop offset="70%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </radialGradient>
+    <radialGradient id="spaceAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="250" cy="250" r="230" fill="url(#spaceAura)" />
+  <circle cx="250" cy="250" r="180" fill="url(#lunarGlow)" />
+
+  <!-- Lunar Maria (Dark Basaltic Plains) -->
+  <path d="M160 170 C190 140 240 150 270 180 C290 200 270 230 230 220 C190 210 160 200 160 170 Z" fill="#334155" opacity="0.65" />
+  <path d="M260 220 C300 200 350 220 370 260 C350 290 310 300 280 280 C250 260 240 230 260 220 Z" fill="#334155" opacity="0.6" />
+  <path d="M180 270 C220 260 240 290 230 330 C200 360 160 340 150 310 C140 280 160 270 180 270 Z" fill="#334155" opacity="0.55" />
+
+  <!-- Prominent Impact Craters -->
+  <!-- Tycho & Ray system -->
+  <circle cx="250" cy="380" r="16" fill="#475569" stroke="#e2e8f0" stroke-width="2" />
+  <circle cx="250" cy="380" r="6" fill="#f8fafc" />
+  <!-- Rays -->
+  <line x1="250" y1="364" x2="210" y2="280" stroke="#f1f5f9" stroke-width="1" opacity="0.4" stroke-dasharray="3 3" />
+  <line x1="250" y1="364" x2="290" y2="290" stroke="#f1f5f9" stroke-width="1" opacity="0.4" stroke-dasharray="3 3" />
+  <line x1="250" y1="396" x2="270" y2="420" stroke="#f1f5f9" stroke-width="1" opacity="0.4" stroke-dasharray="3 3" />
+
+  <!-- Copernicus Crater -->
+  <circle cx="210" cy="240" r="12" fill="#475569" stroke="#94a3b8" stroke-width="1.5" />
+  <circle cx="210" cy="240" r="4" fill="#e2e8f0" />
+
+  <!-- Kepler Crater -->
+  <circle cx="160" cy="235" r="9" fill="#475569" stroke="#94a3b8" stroke-width="1" />
+
+  <!-- Grid overlay -->
+  <circle cx="250" cy="250" r="210" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 8" opacity="0.3" />
+  <!-- Artemis South Pole Marker -->
+  <circle cx="250" cy="425" r="5" fill="#00f0ff" />
+  <circle cx="250" cy="425" r="12" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.8" />
+  <text x="268" y="430" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="11" letter-spacing="1">ARTEMIS BASE CAMP (SOUTH POLE)</text>
+</svg>

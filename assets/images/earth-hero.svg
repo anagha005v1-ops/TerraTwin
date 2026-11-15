@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <radialGradient id="spaceGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#0f172a" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#060913" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="earthAtmosphere" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="75%" stop-color="#0369a1" />
+      <stop offset="100%" stop-color="#082f49" />
+    </radialGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="planetGlow">
+      <feGaussianBlur stdDeviation="16" result="blur1" />
+      <feComposite in="SourceGraphic" in2="blur1" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Space Radiance -->
+  <circle cx="300" cy="300" r="280" fill="url(#spaceGlow)" />
+  
+  <!-- Orbital Telemetry Grid Rings -->
+  <circle cx="300" cy="300" r="260" stroke="#00f0ff" stroke-width="1" stroke-dasharray="8 12" opacity="0.3" />
+  <circle cx="300" cy="300" r="230" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="3 6" opacity="0.4" />
+  <circle cx="300" cy="300" r="195" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="14 18" opacity="0.5" />
+
+  <!-- Target Reticle Ticks -->
+  <path d="M300 20 L300 45 M300 555 L300 580 M20 300 L45 300 M555 300 L580 300" stroke="#00f0ff" stroke-width="2" opacity="0.6" />
+  <text x="310" y="42" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="12" letter-spacing="2" opacity="0.8">GEO-ORBITAL // REF-01</text>
+  <text x="310" y="572" fill="#38bdf8" font-family="'Space Grotesk', monospace" font-size="11" letter-spacing="1.5" opacity="0.7">COORD 00°00'N 00°00'E</text>
+
+  <!-- Outer Atmospheric Halo -->
+  <circle cx="300" cy="300" r="176" fill="#00f0ff" opacity="0.2" filter="url(#planetGlow)" />
+  <circle cx="300" cy="300" r="170" fill="url(#earthAtmosphere)" />
+
+  <!-- Continental Landmasses -->
+  <g fill="#047857" opacity="0.75">
+    <!-- North & South America styled -->
+    <path d="M220 220 Q240 210 260 230 T280 270 Q270 310 250 330 Q230 350 240 380 Q250 410 230 430 Q220 410 210 380 Q215 340 190 300 Q180 260 200 240 Z" fill="#059669" />
+    <!-- Africa & Eurasia styled -->
+    <path d="M310 200 Q360 190 410 210 Q440 240 420 280 Q390 310 370 350 Q340 370 330 340 Q310 310 320 260 Z" fill="#10b981" />
+  </g>
+
+  <!-- Swirling Cloud Patterns -->
+  <path d="M180 260 C230 240 280 270 340 250 C390 230 430 260 450 280 C410 300 370 280 320 300 C260 320 210 290 180 260 Z" fill="url(#cloudGrad)" />
+  <path d="M210 340 C260 330 300 360 360 340 C410 320 440 360 420 380 C370 390 330 370 280 390 C240 400 210 370 210 340 Z" fill="url(#cloudGrad)" opacity="0.6" />
+
+  <!-- Terminator (Shadow Crescent) -->
+  <path d="M300 130 A170 170 0 0 1 470 300 A170 170 0 0 1 300 470 Q370 300 300 130 Z" fill="#020617" opacity="0.65" />
+
+  <!-- Orbiting Analogue Ping Beacon -->
+  <g transform="translate(420, 190)">
+    <circle cx="0" cy="0" r="14" fill="#00f0ff" opacity="0.2" filter="url(#planetGlow)">
+      <animate attributeName="r" values="6;18;6" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="5" fill="#00f0ff" />
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    <line x1="8" y1="-8" x2="35" y2="-25" stroke="#00f0ff" stroke-width="1.5" />
+    <line x1="35" y1="-25" x2="110" y2="-25" stroke="#00f0ff" stroke-width="1.5" />
+    <text x="40" y="-30" fill="#00f0ff" font-family="'Space Grotesk', monospace" font-size="10" font-weight="bold" letter-spacing="1">ANALOGUE SITE FOUND</text>
+    <text x="40" y="-12" fill="#94a3b8" font-family="sans-serif" font-size="9">78°N ARCTIC TESTBED</text>
+  </g>
+</svg>
